@@ -75,10 +75,8 @@ nav ul li a {
 #navbar_mob {
     display: none;
     position: absolute;
-    /* left: 30px;
-    top: 30px; */
     margin: auto;
-    background-color: brown;
+    background-color: rgba(168, 234, 220, 0.688);
     width: 90%;
     height: 90%;
     margin: 5%;
@@ -110,17 +108,20 @@ nav ul li a {
     display: none;
     justify-content: space-between;
     padding: 10px;
-    margin-left: 20%;
+}
+
+#logomob {
+    height: 40px;
 }
 
 #burger {
-    height: 35px;
+    height: 40px;
 
 }
 
-main {
+/* main {
     height: 900px;
-}
+} */
 
 #main2 {
     /* padding: 20px; */
@@ -141,13 +142,18 @@ h1 {
     font-size: 2em;
     padding-top: 20px;
     text-align: center;
+    display: block;
 }
 
 .pintro {
+    width: 60%;
     font-size: 1.5em;
-    margin: auto;
+    border: 1px solid black;
+    border-radius: 20px;
     padding: 20px;
-    opacity: 1;
+    background-color: white;
+    margin: 20px auto;
+    text-align: center;
 }
 
 .imgcard {
@@ -199,9 +205,14 @@ h1 {
     margin: 10px 50px;
 }
 
+#xicon {
+    height: 100px;
+}
+
 footer {
     display: flex;
     background-color: white;
+    margin-top: 20px;
 }
 
 /* @media screen and (max-width: 992px) {} */
@@ -209,6 +220,10 @@ footer {
 @media screen and (max-width: 768px) {
     nav, .banniere {
         display: none;
+    }
+
+    .background {
+        height: 1100px;
     }
 
     #navmob {
@@ -223,17 +238,26 @@ footer {
         flex-direction: column-reverse;
     }
 
+    .pintro {
+        width: 90%;
+        margin: 5px auto;
+    }
+
     .card {
         height: 300px;
         width: 90%;
-        margin:0 5%;
+        margin: 5%;
         flex-shrink: 0;
         animation: slider 20s infinite ease-in-out;
         overflow: hidden;
     }
 
     .socialnet {
-        height: 30px;
+        height: 40px;
+    }
+
+    #xicon {
+        height: 50px;
     }
 
 }
