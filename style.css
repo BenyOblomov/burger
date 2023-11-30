@@ -18,17 +18,25 @@
     justify-content: space-between;
 }
 
+.justify-around {
+    justify-content: space-around;
+}
+
 .aligncenter {
     align-items: center;
+}
+
+.column {
+    flex-direction: column;
 }
 
 .w80 {
     width: 80vw;
 }
 
-.w100 {
+/* .w100 {
     width: 100vw;
-}
+} */
 
 .overhid {
     overflow: hidden;
@@ -44,7 +52,7 @@
 
 nav {
     display: flex;
-    width: 100vw;
+    /* width: 100vw; */
     height: 100px;
     padding: 0 10px;
 }
@@ -55,35 +63,42 @@ nav {
 
 nav .research {
     padding: 35px;
+    padding-left: 0;
 }
 
-.research input {
+input, button {
     padding: 4px;
     border-radius: 10px;
 }
 
+nav ul {
+    width: 50%;
+}
+
+
+
 nav ul li a {
     font-size: 1.5em;
     color: black;
-    padding: 15px 40px;
-    border-right : 0.8px solid gray;
+    padding: 15px 30px;
+    border-right: 0.8px solid gray;
 }
 
 .banniere {
     background: url("img/banniere4.jpg") center / cover no-repeat;
-    /* background: url position \ taille repeat; */
-    width: 100vw;
+    width: 99vw;
     height: 400px;
 }
 
 #navbar_mob {
-    display: none;
     position: absolute;
-    margin: auto;
-    background-color: rgba(168, 234, 220, 0.688);
+    z-index: 1;
+    margin-left: -100%;
+    margin-top: 5%;
+    transition: margin-left 0.5s ease;
+    background-color: #58874b;
     width: 90%;
     height: 90%;
-    margin: 5%;
     border-radius: 20px;
 }
 
@@ -123,23 +138,29 @@ nav ul li a {
 
 }
 
-/* main {
-    height: 900px;
-} */
-
 #main2 {
-    /* padding: 20px; */
     display: flex;
     flex-direction: column;
+}
+
+main {
+    overflow: hidden;
+    position: relative;
 }
 
 .background {
     background: url("img/fond.jpg") center/cover repeat;
     opacity: 0.16;
     position: absolute;
-    height: 900px;
+    left: 0;
+    top: 0;
+    height: 100%;
     width: 100%;
-    z-index: -1;
+
+}
+
+.test {
+    position: relative;
 }
 
 h1 {
@@ -216,18 +237,37 @@ h1 {
 footer {
     display: flex;
     background-color: white;
-    margin-top: 20px;
 }
+
+#form input {
+    padding: 5px;
+    width: 260px;
+}
+
+#message_input {
+    height: 200px;
+}
+
+button {
+    font-size: 1.2em;
+}
+
+#form {
+    display: flex;
+    margin:100px auto;
+    background-color: #e1bc7d;
+    width: 600px;
+    height: 500px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
 
 /* @media screen and (max-width: 992px) {} */
 
 @media screen and (max-width: 768px) {
     nav, .banniere {
         display: none;
-    }
-
-    .background {
-        height: 1100px;
     }
 
     #navmob {
@@ -264,4 +304,13 @@ footer {
         height: 50px;
     }
 
+    #form {
+        width: 80%;
+    }
+
+    #footer {
+        height: 60px;
+    }
+
 }
+
