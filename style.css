@@ -1,9 +1,11 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    overflow-x: hidden;
+
 }
 
 .flex {
@@ -34,10 +36,6 @@
     width: 80vw;
 }
 
-/* .w100 {
-    width: 100vw;
-} */
-
 .overhid {
     overflow: hidden;
 }
@@ -52,7 +50,6 @@
 
 nav {
     display: flex;
-    /* width: 100vw; */
     height: 100px;
     padding: 0 10px;
 }
@@ -66,7 +63,7 @@ nav .research {
     padding-left: 0;
 }
 
-input, button {
+input {
     padding: 4px;
     border-radius: 10px;
 }
@@ -75,38 +72,51 @@ nav ul {
     width: 50%;
 }
 
-
+nav ul li {
+    padding: 15px 0;
+}
 
 nav ul li a {
     font-size: 1.5em;
     color: black;
-    padding: 15px 30px;
+    padding: 15px;
     border-right: 0.8px solid gray;
 }
 
 .banniere {
     background: url("img/banniere4.jpg") center / cover no-repeat;
-    width: 99vw;
+    width: 100vw;
     height: 400px;
+}
+
+#navmob {
+    display: none;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#logomob {
+    height: 30px;
+}
+
+label {
+    display: flex;
+}
+
+#burger {
+    visibility: hidden;
 }
 
 #navbar_mob {
     position: absolute;
     z-index: 1;
-    margin-left: -100%;
-    margin-top: 5%;
-    transition: margin-left 0.5s ease;
-    background-color: #58874b;
-    width: 90%;
-    height: 90%;
+    margin-top: -250%;
+    margin-left: -85%;
+    transition: margin-top 0.5s ease;
+    background-color: #94bd88;
+    width: 85%;
+    height: 85%;
     border-radius: 20px;
-}
-
-#navbar_mob i {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 1.5em;
 }
 
 #navbar_mob ul {
@@ -123,24 +133,30 @@ nav ul li a {
     color: black;
 }
 
-#navmob {
-    display: none;
-    justify-content: space-between;
-    padding: 10px;
+.logo_menu::before {
+    content: "\f0c9";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+    font-size: 1.6em;
+    margin-right: 5px;
 }
 
-#logomob {
-    height: 40px;
+#burger:checked ~ .logo_menu::before {
+    position: fixed;
+    right: 5px;
+    content: "\f00d";
+
 }
 
-#burger {
-    height: 40px;
-
+#burger:checked ~ #navbar_mob {
+    margin-top: 7%;
+    position :fixed;
 }
 
 #main2 {
     display: flex;
     flex-direction: column;
+    
 }
 
 main {
@@ -156,11 +172,13 @@ main {
     top: 0;
     height: 100%;
     width: 100%;
+    
 
 }
 
 .test {
     position: relative;
+    margin: auto;
 }
 
 h1 {
@@ -195,7 +213,7 @@ h1 {
     width: 60%;
     margin:20px 20%;
     flex-shrink: 0;
-    animation: slider 20s infinite ease-in-out;
+    animation: slider 12s infinite ease-in-out;
     overflow: hidden;
 }
 
@@ -227,7 +245,7 @@ h1 {
 
 .socialnet {
     height: 80px;
-    margin: 10px 50px;
+    margin: 10px 30px;
 }
 
 #xicon {
@@ -249,6 +267,9 @@ footer {
 }
 
 button {
+    border-radius: 10px;
+    margin: 5px;
+    padding: 3px;
     font-size: 1.2em;
 }
 
@@ -257,25 +278,23 @@ button {
     margin:100px auto;
     background-color: #e1bc7d;
     width: 600px;
-    height: 500px;
+    height: 550px;
     padding: 20px;
     border-radius: 20px;
 }
 
-
-/* @media screen and (max-width: 992px) {} */
-
-@media screen and (max-width: 768px) {
-    nav, .banniere {
+@media screen and (max-width: 700px) {
+    nav {
         display: none;
     }
 
-    #navmob {
-        display: flex;
+    .banniere {
+        height: 10vh;
     }
 
-    .research {
-        padding: 6px;
+    #navmob {
+        height: 8vh;
+        display: flex;
     }
 
     #main2 {
@@ -305,12 +324,19 @@ button {
     }
 
     #form {
+        height: 68vh;
         width: 80%;
+        margin: 20px auto;
+    }
+
+    #form input {
+        padding: 5px;
+        width: 60vw;
     }
 
     #footer {
-        height: 60px;
+        height: 8vh;
+        overflow-y: hidden;
     }
 
 }
-

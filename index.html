@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes dessins de Naruto</title>
+    <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
@@ -19,23 +19,24 @@
             </ul>
             <div class="research"><input type="search"></div>
         </nav>
-        <div class="banniere">
         </div>
         <div id="navmob">
             <img id="logomob" src="img/logo.jpg" alt="logo">
-            <div class="research"><input type="search"></div>
-            <img id="burger" src="img/burger.png" alt="logo menu">
+            <label>
+                <input type="checkbox" name="burger" id="burger">
+                <div class="logo_menu"></div>
+                <div id="navbar_mob">
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="#">A propos</a></li>
+                        <li><a href="#">Mes dessins</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </label>
         </div>
-    
-            <div id="navbar_mob">
-                <i id="quit" class="fa-sharp fa-regular fa-circle-xmark"></i>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="#">A propos</a></li>
-                    <li><a href="#">Mes dessins</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+        <div class="banniere">
+
     </header>
     <main>
 
@@ -77,7 +78,5 @@
         <a href="#"><img class="socialnet" src="img/youtube.png" alt="youtube"></a>
         <a href="#"><img id="xicon" class="socialnet" src="img/xicon.png" alt="X"></a>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
