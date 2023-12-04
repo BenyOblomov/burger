@@ -115,7 +115,7 @@ label {
     transition: margin-top 0.5s ease;
     background-color: #94bd88;
     width: 85%;
-    height: 85%;
+    height: 90%;
     border-radius: 20px;
 }
 
@@ -283,7 +283,7 @@ button {
     border-radius: 20px;
 }
 
-@media screen and (max-width: 913px) {
+@media screen and (max-width: 1010px) {
     nav {
         display: none;
     }
@@ -293,7 +293,7 @@ button {
     }
 
     #navmob {
-        height: 8.5vh;
+        height: 10vh;
         display: flex;
     }
 
