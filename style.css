@@ -283,7 +283,7 @@ button {
     border-radius: 20px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 830px) {
     nav {
         display: none;
     }
@@ -293,7 +293,7 @@ button {
     }
 
     #navmob {
-        height: 8vh;
+        height: 8.5vh;
         display: flex;
     }
 
@@ -324,7 +324,7 @@ button {
     }
 
     #form {
-        height: 68vh;
+        height: 65vh;
         width: 80%;
         margin: 20px auto;
     }
@@ -335,7 +335,7 @@ button {
     }
 
     #footer {
-        height: 8vh;
+        height: 8.5vh;
         overflow-y: hidden;
     }
 
